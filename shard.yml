@@ -1,0 +1,11 @@
+name: cransi
+version: 0.1.0
+
+authors:
+  - daviscodsbugs <daviscodesbugs@gmail.com>
+
+description: ANSI escape codes for terminal manipulation
+
+crystal: 0.30.1
+
+license: GPL
