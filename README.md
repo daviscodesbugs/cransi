@@ -1,6 +1,6 @@
 # cransi
 
-TODO: Write a description here
+ANSI escape codes for terminal manipulation
 
 ## Installation
 
@@ -9,7 +9,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      cransi:
-       github: your-github-user/cransi
+       github: daviscodesbugs/cransi
    ```
 
 2. Run `shards install`
@@ -20,7 +20,7 @@ TODO: Write a description here
 require "cransi"
 ```
 
-TODO: Write usage instructions here
+**TODO: Write usage instructions here**
 
 ## API
 
@@ -75,8 +75,7 @@ For the following, a cell that is "erased" can also be thought of as blank
 TODO: Write development instructions here
 
 ## Contributing
-
-1. Fork it (<https://github.com/your-github-user/cransi/fork>)
+1. Fork it (<https://github.com/daviscodesbugs/cransi/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -84,4 +83,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [daviscodsbugs](https://github.com/your-github-user) - creator and maintainer
+- [daviscodsbugs](https://github.com/daviscodesbugs) - creator and maintainer
