@@ -22,6 +22,54 @@ require "cransi"
 
 TODO: Write usage instructions here
 
+## API
+
+### Cursor Movement
+
+- `cursor_up` Move the cursor up
+- `cursor_down` Move the cursor down
+- `cursor_forward` Move the cursor forward
+- `cursor_backward` Move the cursor backward
+- `cursor_next_line` Move the cursor to the beginning of the next line
+- `cursor_prev_line` Move the cursor to the beginning of the previous line
+- `cursor_col` Move the cursor to a specific column
+- `cursor_to` Move the cursor to a specific row & column
+- `cursor_save` Save the current position of the cursor to later `cursor_restore` to
+- `cursor_restore` Restore the cursor to the position when `cursor_save` was last called
+- `cursor_show` Show the cursor
+- `cursor_hide` Hide the cursor
+- `cursor_get_pos` Get the current position of the cursor
+- `cursor_home` Return the cursor to row 0, column 0
+
+### Erase
+
+For the following, a cell that is "erased" can also be thought of as blank
+
+- `erase_chars` Mark cells from cursor as erased
+- `erase_end` Mark cells from the cursor the end of the line as erased
+- `erase_home` Mark cells from the beginning of the line to the cursor as erased
+- `erase_line` **TODO**
+- `erase_down` Mark cells from the cursor the the bottom of the display as erased
+- `erase_up` Mark cells from the top of the display to the cursor as erased
+- `erase_screen` Mark the entire display as erased
+- `erase_terminal` Mark the entire display and the scroll-back buffer as erased
+
+### Insert
+
+- `insert_char` Insert cells, shifting the rest of the line forward
+- `insert_line` Insert lines, shifting the current line downward
+
+### Delete
+
+- `delete_char` Delete cells, shifting the rest of the line backward
+- `delete_line` Delete lines, shifting following lines upward
+
+### Misc
+
+- `repeat` Repeat the last printable character
+- `scroll_up` Shift all lines upward, generating new lines
+- `scroll_down` Shift all lines downward
+
 ## Development
 
 TODO: Write development instructions here
