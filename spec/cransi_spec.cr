@@ -136,4 +136,49 @@ describe Cransi do
   it "insert line - simple param" do
     (Cransi.insert_line 27).should eq "\e[27L"
   end
+  it "delete char - no param" do
+    (Cransi.delete_char).should eq "\e[1P"
+  end
+  it "delete char - default param" do
+    (Cransi.delete_char 1).should eq "\e[1P"
+  end
+  it "delete char - simple param" do
+    (Cransi.delete_char 27).should eq "\e[27P"
+  end
+  it "delete line - no param" do
+    (Cransi.delete_line).should eq "\e[1M"
+  end
+  it "delete line - default param" do
+    (Cransi.delete_line 1).should eq "\e[1M"
+  end
+  it "delete line - simple param" do
+    (Cransi.delete_line 27).should eq "\e[27M"
+  end
+  it "repeat char - no param" do
+    (Cransi.repeat).should eq "\e[1b"
+  end
+  it "repeat char - default param" do
+    (Cransi.repeat 1).should eq "\e[1b"
+  end
+  it "repeat char - simple param" do
+    (Cransi.repeat 27).should eq "\e[27b"
+  end
+  it "scroll up - no param" do
+    (Cransi.scroll_up).should eq "\e[1S"
+  end
+  it "scroll up - default param" do
+    (Cransi.scroll_up 1).should eq "\e[1S"
+  end
+  it "scroll up - simple param" do
+    (Cransi.scroll_up 27).should eq "\e[27S"
+  end
+  it "scroll down - no param" do
+    (Cransi.scroll_down).should eq "\e[1T"
+  end
+  it "scroll down - default param" do
+    (Cransi.scroll_down 1).should eq "\e[1T"
+  end
+  it "scroll down - simple param" do
+    (Cransi.scroll_down 27).should eq "\e[27T"
+  end
 end
