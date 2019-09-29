@@ -48,7 +48,7 @@ For the following, a cell that is "erased" can also be thought of as blank
 - `erase_chars` Mark cells from cursor as erased
 - `erase_end` Mark cells from the cursor the end of the line as erased
 - `erase_home` Mark cells from the beginning of the line to the cursor as erased
-- `erase_line` **TODO**
+- `erase_line` Mark the entire line as erased
 - `erase_down` Mark cells from the cursor the the bottom of the display as erased
 - `erase_up` Mark cells from the top of the display to the cursor as erased
 - `erase_screen` Mark the entire display as erased
