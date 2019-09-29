@@ -18,9 +18,36 @@ ANSI escape codes for terminal manipulation
 
 ```crystal
 require "cransi"
+
+puts "Hello world!\nThanks for checking out cransi!"
+print Cransi.cursor_save
+wait
+print Cransi.cursor_prev_line 2
+wait
+print Cransi.cursor_col 6
+wait
+print Cransi.insert_char 7
+wait
+print " there,"
+wait
+print Cransi.cursor_restore
+wait
+puts "Try this example with SLOW = true"
+wait
+
+SLOW = false
+def wait
+  sleep 1.second if SLOW
+end
 ```
 
-**TODO: Write usage instructions here**
+Final output
+
+```text
+Hello there, world!
+Thanks for checking out cransi!
+Try this example with SLOW = true
+```
 
 ## API
 
@@ -69,10 +96,6 @@ For the following, a cell that is "erased" can also be thought of as blank
 - `repeat` Repeat the last printable character
 - `scroll_up` Shift all lines upward, generating new lines
 - `scroll_down` Shift all lines downward
-
-## Development
-
-TODO: Write development instructions here
 
 ## Contributing
 1. Fork it (<https://github.com/daviscodesbugs/cransi/fork>)
