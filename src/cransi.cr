@@ -1,4 +1,5 @@
-# TODO: Write documentation for `Cransi`
+# Cransi encapsulates a collection of ANSI escape codes that can be
+# used to manipulate the terminal
 module Cransi
   VERSION = "0.1.0"
 
