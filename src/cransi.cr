@@ -65,19 +65,19 @@ module Cransi
     scroll_down
   )
   {% for count in COUNTS %}
-      def self.{{count.id}}(count = 1) : String
-        ESC + count.to_s + {{count.id.upcase}}
-      end
-    {% end %}
+    def self.{{count.id}}(count = 1) : String
+      ESC + count.to_s + {{count.id.upcase}}
+    end
+  {% end %}
 
   private COORDS = %w(
     cursor_to
   )
   {% for coord in COORDS %}
-      def self.{{coord.id}}(row : Int, col : Int) : String
-        ESC + row.to_s + SEP + col.to_s + {{coord.id.upcase}}
-      end
-    {% end %}
+    def self.{{coord.id}}(row : Int, col : Int) : String
+      ESC + row.to_s + SEP + col.to_s + {{coord.id.upcase}}
+    end
+  {% end %}
 
   private CMDS = %w(
     cursor_save
@@ -95,8 +95,8 @@ module Cransi
     erase_terminal
   )
   {% for cmd in CMDS %}
-      def self.{{cmd.id}} : String
-        ESC + {{cmd.id.upcase}}
-      end
-    {% end %}
+    def self.{{cmd.id}} : String
+      ESC + {{cmd.id.upcase}}
+    end
+  {% end %}
 end
