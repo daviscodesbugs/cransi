@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/daviscodesbugs/cransi.svg?branch=master)](https://travis-ci.org/daviscodesbugs/cransi)
+
 # cransi
 
 ANSI escape codes for terminal manipulation
