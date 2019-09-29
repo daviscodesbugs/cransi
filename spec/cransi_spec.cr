@@ -122,7 +122,7 @@ describe Cransi do
     (Cransi.insert_char).should eq "\e[1@"
   end
   it "insert char - default param" do
-    (Cransi.insert_char 1).should eq "\e[1@"0
+    (Cransi.insert_char 1).should eq "\e[1@"
   end
   it "insert char - simple param" do
     (Cransi.insert_char 27).should eq "\e[27@"
