@@ -88,4 +88,52 @@ describe Cransi do
   it "cursor set home" do
     (Cransi.cursor_home).should eq "\e[H"
   end
+  it "erase characters - no params" do
+    (Cransi.erase_chars).should eq "\e[1X"
+  end
+  it "erase characters - default params" do
+    (Cransi.erase_chars 1).should eq "\e[1X"
+  end
+  it "erase characters - simple param" do
+    (Cransi.erase_chars 27).should eq "\e[27X"
+  end
+  it "erase end" do
+    (Cransi.erase_end).should eq "\e[0K"
+  end
+  it "erase home" do
+    (Cransi.erase_home).should eq "\e[1K"
+  end
+  it "erase line" do
+    (Cransi.erase_line).should eq "\e[2K"
+  end
+  it "erase down" do
+    (Cransi.erase_down).should eq "\e[0J"
+  end
+  it "erase up" do
+    (Cransi.erase_up).should eq "\e[1J"
+  end
+  it "erase screen" do
+    (Cransi.erase_screen).should eq "\e[2J"
+  end
+  it "erase terminal" do
+    (Cransi.erase_terminal).should eq "\e[3J"
+  end
+  it "insert char - no param" do
+    (Cransi.insert_char).should eq "\e[1@"
+  end
+  it "insert char - default param" do
+    (Cransi.insert_char 1).should eq "\e[1@"0
+  end
+  it "insert char - simple param" do
+    (Cransi.insert_char 27).should eq "\e[27@"
+  end
+  it "insert line - no param" do
+    (Cransi.insert_line).should eq "\e[1L"
+  end
+  it "insert line - default param" do
+    (Cransi.insert_line 1).should eq "\e[1L"
+  end
+  it "insert line - simple param" do
+    (Cransi.insert_line 27).should eq "\e[27L"
+  end
 end

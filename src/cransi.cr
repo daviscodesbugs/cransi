@@ -48,15 +48,15 @@ module Cransi
   private ERASE_TERMINAL = "3J"
 
   private COUNTS = %w(
-    cursor_up
-    cursor_down
-    cursor_forward
-    cursor_backward
-    cursor_next_line
-    cursor_prev_line
-    cursor_col
+     cursor_up
+     cursor_down
+     cursor_forward
+     cursor_backward
+     cursor_next_line
+     cursor_prev_line
+     cursor_col
     insert_char
-    erase_chars
+     erase_chars
     insert_line
     delete_line
     delete_char
@@ -71,7 +71,7 @@ module Cransi
     {% end %}
 
   private COORDS = %w(
-    cursor_to
+     cursor_to
   )
   {% for coord in COORDS %}
       def self.{{coord.id}}(row : Int, col : Int) : String
@@ -80,19 +80,19 @@ module Cransi
     {% end %}
 
   private CMDS = %w(
-    cursor_save
-    cursor_restore
-    cursor_show
-    cursor_hide
-    cursor_get_pos
-    erase_end
-    erase_home
-    erase_line
-    erase_down
-    erase_up
-    erase_screen
-    erase_terminal
-    cursor_home
+     cursor_save
+     cursor_restore
+     cursor_show
+     cursor_hide
+     cursor_get_pos
+     cursor_home
+     erase_end
+     erase_home
+     erase_line
+     erase_down
+     erase_up
+     erase_screen
+     erase_terminal
   )
   {% for cmd in CMDS %}
       def self.{{cmd.id}} : String
