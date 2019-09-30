@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.30.1">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "";
+</script>
+
+  <meta id="repository-name" content="github.com/daviscodesbugs/cransi">
+  <title>README - github.com/daviscodesbugs/cransi</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" " data-id="github.com/daviscodesbugs/cransi/Cransi" data-name="cransi">
+      <a href="Cransi.html">Cransi</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<p><a href="https://github.com/daviscodesbugs/cransi/releases" target="_blank"><img src="https://img.shields.io/github/release/daviscodesbugs/cransi.svg" alt="GitHub release"/></a>
+<a href="https://travis-ci.org/daviscodesbugs/cransi" target="_blank"><img src="https://travis-ci.org/daviscodesbugs/cransi.svg?branch=master" alt="Build Status"/></a></p>
+
+<h1>cransi</h1>
+
+<p>ANSI escape codes for terminal manipulation</p>
+
+<h2>Installation</h2>
+
+<ol><li>Add the dependency to your <code>shard.yml</code>:</li></ol>
+
+<pre><code class="language-yaml">dependencies:
+  cransi:
+    github: daviscodesbugs/cransi</code></pre>
+
+<ol><li>Run <code>shards install</code></li></ol>
+
+<h2>Usage</h2>
+
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;cransi&quot;</span>
+
+puts <span class="s">&quot;Hello world!\nThanks for checking out cransi!&quot;</span>
+print <span class="t">Cransi</span>.cursor_save
+wait
+print <span class="t">Cransi</span>.cursor_prev_line <span class="n">2</span>
+wait
+print <span class="t">Cransi</span>.cursor_col <span class="n">6</span>
+wait
+print <span class="t">Cransi</span>.insert_char <span class="n">7</span>
+wait
+print <span class="s">&quot; there,&quot;</span>
+wait
+print <span class="t">Cransi</span>.cursor_restore
+wait
+puts <span class="s">&quot;Try this example with SLOW = true&quot;</span>
+wait
+
+<span class="t">SLOW</span> <span class="o">=</span> <span class="n">false</span>
+<span class="k">def</span> <span class="m">wait</span>
+  sleep <span class="n">1</span>.second <span class="k">if</span> <span class="t">SLOW</span>
+<span class="k">end</span></code></pre>
+
+<p>Final output</p>
+
+<pre><code class="language-text">Hello there, world!
+Thanks for checking out cransi!
+Try this example with SLOW = true</code></pre>
+
+<h2>API</h2>
+
+<p><a href="https://daviscodesbugs.github.io/cransi/" target="_blank">Additional documentation can be found here</a></p>
+
+<h3>Cursor Movement</h3>
+
+<ul><li><code>cursor_up</code> Move the cursor up</li><li><code>cursor_down</code> Move the cursor down</li><li><code>cursor_forward</code> Move the cursor forward</li><li><code>cursor_backward</code> Move the cursor backward</li><li><code>cursor_next_line</code> Move the cursor to the beginning of the next line</li><li><code>cursor_prev_line</code> Move the cursor to the beginning of the previous line</li><li><code>cursor_col</code> Move the cursor to a specific column</li><li><code>cursor_to</code> Move the cursor to a specific row & column</li><li><code>cursor_save</code> Save the current position of the cursor to later <code>cursor_restore</code> to</li><li><code>cursor_restore</code> Restore the cursor to the position when <code>cursor_save</code> was last called</li><li><code>cursor_show</code> Show the cursor</li><li><code>cursor_hide</code> Hide the cursor</li><li><code>cursor_get_pos</code> Get the current position of the cursor</li><li><code>cursor_home</code> Return the cursor to row 0, column 0</li></ul>
+
+<h3>Erase</h3>
+
+<p>For the following, a cell that is "erased" can also be thought of as blank</p>
+
+<ul><li><code>erase_chars</code> Mark cells from cursor as erased</li><li><code>erase_end</code> Mark cells from the cursor the end of the line as erased</li><li><code>erase_home</code> Mark cells from the beginning of the line to the cursor as erased</li><li><code>erase_line</code> Mark the entire line as erased</li><li><code>erase_down</code> Mark cells from the cursor the the bottom of the display as erased</li><li><code>erase_up</code> Mark cells from the top of the display to the cursor as erased</li><li><code>erase_screen</code> Mark the entire display as erased</li><li><code>erase_terminal</code> Mark the entire display and the scroll-back buffer as erased</li></ul>
+
+<h3>Insert</h3>
+
+<ul><li><code>insert_char</code> Insert cells, shifting the rest of the line forward</li><li><code>insert_line</code> Insert lines, shifting the current line downward</li></ul>
+
+<h3>Delete</h3>
+
+<ul><li><code>delete_char</code> Delete cells, shifting the rest of the line backward</li><li><code>delete_line</code> Delete lines, shifting following lines upward</li></ul>
+
+<h3>Misc</h3>
+
+<ul><li><code>repeat</code> Repeat the last printable character</li><li><code>scroll_up</code> Shift all lines upward, generating new lines</li><li><code>scroll_down</code> Shift all lines downward</li></ul>
+
+<h2>Contributing</h2>
+
+<ol><li>Fork it (&lt;https://github.com/daviscodesbugs/cransi/fork>)</li><li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li><li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li><li>Push to the branch (<code>git push origin my-new-feature</code>)</li><li>Create a new Pull Request</li></ol>
+
+<h2>Contributors</h2>
+
+<ul><li><a href="https://github.com/daviscodesbugs" target="_blank">daviscodsbugs</a> - creator and maintainer</li></ul>
+</div>
+</body>
+</html>

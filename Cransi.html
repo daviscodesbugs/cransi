@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.30.1">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "";
+</script>
+
+  <meta id="repository-name" content="github.com/daviscodesbugs/cransi">
+  <title>Cransi - github.com/daviscodesbugs/cransi</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" current" data-id="github.com/daviscodesbugs/cransi/Cransi" data-name="cransi">
+      <a href="Cransi.html">Cransi</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> Cransi
+
+</h1>
+
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>Cransi encapsulates a collection of ANSI escape codes that can be
+used to manipulate the terminal</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L3" target="_blank">
+        cransi.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="VERSION">
+        <strong>VERSION</strong> = <code><span class="s">&quot;0.1.0&quot;</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+  <h2>Class Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#cursor_backward(count=1):String-class-method" class="signature"><strong>.cursor_backward</strong>(count = <span class="n">1</span>) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cursor_col(count=1):String-class-method" class="signature"><strong>.cursor_col</strong>(count = <span class="n">1</span>) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cursor_down(count=1):String-class-method" class="signature"><strong>.cursor_down</strong>(count = <span class="n">1</span>) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cursor_forward(count=1):String-class-method" class="signature"><strong>.cursor_forward</strong>(count = <span class="n">1</span>) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cursor_get_pos:String-class-method" class="signature"><strong>.cursor_get_pos</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cursor_hide:String-class-method" class="signature"><strong>.cursor_hide</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cursor_home:String-class-method" class="signature"><strong>.cursor_home</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cursor_next_line(count=1):String-class-method" class="signature"><strong>.cursor_next_line</strong>(count = <span class="n">1</span>) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cursor_prev_line(count=1):String-class-method" class="signature"><strong>.cursor_prev_line</strong>(count = <span class="n">1</span>) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cursor_restore:String-class-method" class="signature"><strong>.cursor_restore</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cursor_save:String-class-method" class="signature"><strong>.cursor_save</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cursor_show:String-class-method" class="signature"><strong>.cursor_show</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cursor_to(row:Int,col:Int):String-class-method" class="signature"><strong>.cursor_to</strong>(row : Int, col : Int) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cursor_up(count=1):String-class-method" class="signature"><strong>.cursor_up</strong>(count = <span class="n">1</span>) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete_char(count=1):String-class-method" class="signature"><strong>.delete_char</strong>(count = <span class="n">1</span>) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete_line(count=1):String-class-method" class="signature"><strong>.delete_line</strong>(count = <span class="n">1</span>) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#erase_chars(count=1):String-class-method" class="signature"><strong>.erase_chars</strong>(count = <span class="n">1</span>) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#erase_down:String-class-method" class="signature"><strong>.erase_down</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#erase_end:String-class-method" class="signature"><strong>.erase_end</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#erase_home:String-class-method" class="signature"><strong>.erase_home</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#erase_line:String-class-method" class="signature"><strong>.erase_line</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#erase_screen:String-class-method" class="signature"><strong>.erase_screen</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#erase_terminal:String-class-method" class="signature"><strong>.erase_terminal</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#erase_up:String-class-method" class="signature"><strong>.erase_up</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#insert_char(count=1):String-class-method" class="signature"><strong>.insert_char</strong>(count = <span class="n">1</span>) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#insert_line(count=1):String-class-method" class="signature"><strong>.insert_line</strong>(count = <span class="n">1</span>) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#repeat(count=1):String-class-method" class="signature"><strong>.repeat</strong>(count = <span class="n">1</span>) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#scroll_down(count=1):String-class-method" class="signature"><strong>.scroll_down</strong>(count = <span class="n">1</span>) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#scroll_up(count=1):String-class-method" class="signature"><strong>.scroll_up</strong>(count = <span class="n">1</span>) : String</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail" id="cursor_backward(count=1):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>cursor_backward</strong>(count = <span class="n">1</span>) : String
+
+        <a class="method-permalink" href="#cursor_backward(count=1):String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cursor_col(count=1):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>cursor_col</strong>(count = <span class="n">1</span>) : String
+
+        <a class="method-permalink" href="#cursor_col(count=1):String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cursor_down(count=1):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>cursor_down</strong>(count = <span class="n">1</span>) : String
+
+        <a class="method-permalink" href="#cursor_down(count=1):String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cursor_forward(count=1):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>cursor_forward</strong>(count = <span class="n">1</span>) : String
+
+        <a class="method-permalink" href="#cursor_forward(count=1):String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cursor_get_pos:String-class-method">
+      <div class="signature">
+        
+        def self.<strong>cursor_get_pos</strong> : String
+
+        <a class="method-permalink" href="#cursor_get_pos:String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cursor_hide:String-class-method">
+      <div class="signature">
+        
+        def self.<strong>cursor_hide</strong> : String
+
+        <a class="method-permalink" href="#cursor_hide:String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cursor_home:String-class-method">
+      <div class="signature">
+        
+        def self.<strong>cursor_home</strong> : String
+
+        <a class="method-permalink" href="#cursor_home:String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cursor_next_line(count=1):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>cursor_next_line</strong>(count = <span class="n">1</span>) : String
+
+        <a class="method-permalink" href="#cursor_next_line(count=1):String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cursor_prev_line(count=1):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>cursor_prev_line</strong>(count = <span class="n">1</span>) : String
+
+        <a class="method-permalink" href="#cursor_prev_line(count=1):String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cursor_restore:String-class-method">
+      <div class="signature">
+        
+        def self.<strong>cursor_restore</strong> : String
+
+        <a class="method-permalink" href="#cursor_restore:String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cursor_save:String-class-method">
+      <div class="signature">
+        
+        def self.<strong>cursor_save</strong> : String
+
+        <a class="method-permalink" href="#cursor_save:String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cursor_show:String-class-method">
+      <div class="signature">
+        
+        def self.<strong>cursor_show</strong> : String
+
+        <a class="method-permalink" href="#cursor_show:String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cursor_to(row:Int,col:Int):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>cursor_to</strong>(row : Int, col : Int) : String
+
+        <a class="method-permalink" href="#cursor_to(row:Int,col:Int):String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L77" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cursor_up(count=1):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>cursor_up</strong>(count = <span class="n">1</span>) : String
+
+        <a class="method-permalink" href="#cursor_up(count=1):String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_char(count=1):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>delete_char</strong>(count = <span class="n">1</span>) : String
+
+        <a class="method-permalink" href="#delete_char(count=1):String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_line(count=1):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>delete_line</strong>(count = <span class="n">1</span>) : String
+
+        <a class="method-permalink" href="#delete_line(count=1):String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="erase_chars(count=1):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>erase_chars</strong>(count = <span class="n">1</span>) : String
+
+        <a class="method-permalink" href="#erase_chars(count=1):String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="erase_down:String-class-method">
+      <div class="signature">
+        
+        def self.<strong>erase_down</strong> : String
+
+        <a class="method-permalink" href="#erase_down:String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="erase_end:String-class-method">
+      <div class="signature">
+        
+        def self.<strong>erase_end</strong> : String
+
+        <a class="method-permalink" href="#erase_end:String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="erase_home:String-class-method">
+      <div class="signature">
+        
+        def self.<strong>erase_home</strong> : String
+
+        <a class="method-permalink" href="#erase_home:String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="erase_line:String-class-method">
+      <div class="signature">
+        
+        def self.<strong>erase_line</strong> : String
+
+        <a class="method-permalink" href="#erase_line:String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="erase_screen:String-class-method">
+      <div class="signature">
+        
+        def self.<strong>erase_screen</strong> : String
+
+        <a class="method-permalink" href="#erase_screen:String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="erase_terminal:String-class-method">
+      <div class="signature">
+        
+        def self.<strong>erase_terminal</strong> : String
+
+        <a class="method-permalink" href="#erase_terminal:String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="erase_up:String-class-method">
+      <div class="signature">
+        
+        def self.<strong>erase_up</strong> : String
+
+        <a class="method-permalink" href="#erase_up:String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="insert_char(count=1):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>insert_char</strong>(count = <span class="n">1</span>) : String
+
+        <a class="method-permalink" href="#insert_char(count=1):String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="insert_line(count=1):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>insert_line</strong>(count = <span class="n">1</span>) : String
+
+        <a class="method-permalink" href="#insert_line(count=1):String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="repeat(count=1):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>repeat</strong>(count = <span class="n">1</span>) : String
+
+        <a class="method-permalink" href="#repeat(count=1):String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="scroll_down(count=1):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>scroll_down</strong>(count = <span class="n">1</span>) : String
+
+        <a class="method-permalink" href="#scroll_down(count=1):String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="scroll_up(count=1):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>scroll_up</strong>(count = <span class="n">1</span>) : String
+
+        <a class="method-permalink" href="#scroll_up(count=1):String-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/daviscodesbugs/cransi/blob/0aaf2aa3a037c00523935911e347e94ea7dc45f7/src/cransi.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+
+</div>
+
+</body>
+</html>
