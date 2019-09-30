@@ -8,11 +8,11 @@ ANSI escape codes for terminal manipulation
 
 1. Add the dependency to your `shard.yml`:
 
-   ```yaml
-   dependencies:
-     cransi:
-       github: daviscodesbugs/cransi
-   ```
+```yaml
+dependencies:
+  cransi:
+    github: daviscodesbugs/cransi
+```
 
 2. Run `shards install`
 
@@ -52,6 +52,8 @@ Try this example with SLOW = true
 ```
 
 ## API
+
+[Additional documentation can be found here](https://daviscodesbugs.github.io/cransi/)
 
 ### Cursor Movement
 
