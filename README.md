@@ -1,3 +1,4 @@
+[![GitHub release](https://img.shields.io/github/release/daviscodesbugs/cransi.svg)](https://github.com/daviscodesbugs/cransi/releases)
 [![Build Status](https://travis-ci.org/daviscodesbugs/cransi.svg?branch=master)](https://travis-ci.org/daviscodesbugs/cransi)
 
 # cransi
